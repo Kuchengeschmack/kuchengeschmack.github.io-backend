@@ -1,9 +1,17 @@
 package com.example.demo;
 
 public class Images {
-	Folder[] folders;
+	private Folder[] folders;
+
+	Images() {
+		super();
+	}
 
 	Images(Folder[] folders) {
 		this.folders = folders;
+	}
+
+	public Folder[] getFolders() {
+		return this.folders;
 	}
 }

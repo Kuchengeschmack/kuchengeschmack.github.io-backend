@@ -9,12 +9,10 @@ public class Gallery {
 	public Gallery(Images images, String path) {
 		this._photos = new ArrayList<Photo>();
 
-		for (int i = 0; i < images.folders.length; i++) {
-			System.out.println("test");
-			if (images.folders[i].path().equals(path)) {
-				for (int j = 0; j < images.folders[i].names().length; j++) {
-					this._photos.add(new Photo(images.folders[i].names()[j], path));
-					System.out.println("test");
+		for (int i = 0; i < images.getFolders().length; i++) {
+			if (images.getFolders()[i].getPath().equals(path)) {
+				for (int j = 0; j < images.getFolders()[i].getFileNames().length; j++) {
+					this._photos.add(new Photo(images.getFolders()[i].getFileNames()[j], path));
 				}
 
 			}
